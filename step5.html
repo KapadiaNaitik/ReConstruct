@@ -23,7 +23,7 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar" style="background-color: #078282FF;">
         <img src="./images/logo.png" alt="Logo Not found" width="150px">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,7 +34,7 @@
             <ul class="navbar-nav mr-auto">
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="button">Admin</button>
+                <button class="btn btn-primary" type="button">Admin</button>
             </form>
         </div>
     </nav>
@@ -54,9 +54,8 @@
                     <span style="font-size: 25px;">&nbsp; type waste. &nbsp;</span><br />
                     <span style="font-size: 25px;">We will pickup on &nbsp;</span><span id="answer3"
                         style="font-weight: bold;"></span>
-
                 </div>
-
+                <button class="btn btn-success" type="button" onclick="javascript:call()">Continue</button>
             </div>
             <div class="image-section">
                 <img src="./images/step-5.png">
@@ -72,6 +71,10 @@
     document.getElementById("answer1").innerHTML = x;
     document.getElementById("answer2").innerHTML += localStorage.getItem("TypeOfWaste");
     document.getElementById("answer3").innerHTML += localStorage.getItem("Date");
+
+    function call() {
+        window.location.href = "./step6.html";
+    }
 </script>
 
 </html>
